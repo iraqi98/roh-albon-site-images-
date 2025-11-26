@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>معرض الصور</title>
+<style>
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #ffffff;
+    margin: 0;
+    padding: 20px;
+  }
+  .slider {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+  }
+  img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  button {
+    padding: 10px 20px;
+    margin: 15px 10px;
+    font-size: 18px;
+    border: none;
+    background: #ff8c00;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #e67e00;
+  }
+</style>
+</head>
+<body>
+
+<h2>معرض الصور</h2>
+
+<div class="slider">
+  <img id="slide" src="https://raw.githubusercontent.com/iraqi98/Roh-Albon/main/Food%20%26%20Restaurant%20Service%20Website%20in%20Orange%20Cream%20and%20White%20Photographic%20Style%20(3).png">
+</div>
+
+<button onclick="prev()">السابق</button>
+<button onclick="next()">التالي</button>
+
+<script>
+let images = [
+  "https://raw.githubusercontent.com/iraqi98/Roh-Albon/main/Food%20%26%20Restaurant%20Service%20Website%20in%20Orange%20Cream%20and%20White%20Photographic%20Style%20(3).png",
+  "https://raw.githubusercontent.com/iraqi98/Roh-Albon/main/BON.jpg"
+];
+
+let index = 0;
+
+function show() {
+  document.getElementById("slide").src = images[index];
+}
+
+function next() {
+  index = (index + 1) % images.length;
+  show();
+}
+
+function prev() {
+  index = (index - 1 + images.length) % images.length;
+  show();
+}
+</script>
+
+</body>
+</html>
