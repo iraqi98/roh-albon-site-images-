@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>معرض صور Roh-Albon</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+    .gallery img {
+      max-width: 90%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <h1>معرض صور Roh-Albon</h1>
+  <div class="gallery">
+    <img src="images/roh-albon-menu.png" alt="قائمة Roh-Albon">
+    <img src="images/villa-floorplan.jpeg" alt="مخطط فيلا معماري">
+    <img src="images/cake-promo.jpeg" alt="صورة كيك من BON Coffee & More">
+  </div>
+</body>
+</html>
